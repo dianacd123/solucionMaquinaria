@@ -5,7 +5,7 @@ import image from "/src/assets/image.jpg"
 export default function BannerP() {
   return (
     
-    <div className="w-screen  sm:flex">
+    <div className="  sm:flex">
   <div className="flex-1 justify-center  p-6   bg-[#FDE502] flex flex-col">
     <h1 className="text-[#0b0a09] font-bold  text-5xl">
       ¿Listo para llevar su proyecto al siguiente nivel?
