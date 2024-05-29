@@ -14,7 +14,7 @@ export function ButtonCTA() {
       <Modal show={openModal} size="2xl" popup onClose={() => setOpenModal(false)} initialFocus={emailInputRef}>
         <Modal.Header />
         <Modal.Body>
-        <div className="max-w-4xl mx-auto py-10 pt-0 pb-0">
+        <div className="max-w-4xl mx-auto py-10 pt-0 pb-0 ">
             <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">Solicita una Cotización</h1>
             <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">
