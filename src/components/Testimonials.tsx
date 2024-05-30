@@ -56,7 +56,7 @@ const Test = () => {
   return (
     <div className="bg-black font-poppins min-h-2">
       <div className="text-center py-10">
-        <h2 className="text-6xl font-bold text-amber-300">Usuarios de "Tu solución en Maquinarias" satisfechos</h2>
+        <h2 className="text-6xl font-bold text-[#fde502]">Usuarios de "Tu solución en Maquinarias" satisfechos</h2>
       </div>
 
       <motion.div
