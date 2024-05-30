@@ -1,3 +1,4 @@
+import { ButtonCTA } from "./ButtonCTA";
 import image from "/src/assets/image.jpg"
 
 import { Accordion, AccordionContent, AccordionPanel, AccordionTitle } from "flowbite-react";
@@ -11,7 +12,7 @@ export function HiringProcess() {
   </div>
     <Accordion>
       <AccordionPanel>
-        <AccordionTitle>Consulta y Asesoramiento Inicial</AccordionTitle>
+        <AccordionTitle>1. Consulta y Asesoramiento Inicial</AccordionTitle>
         <AccordionContent>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
           El cliente se pone en contacto con nosotros y nos
@@ -21,7 +22,7 @@ proporciona detalles sobre su proyecto.
         </AccordionContent>
       </AccordionPanel>
       <AccordionPanel>
-        <AccordionTitle>Cotización y Reserva</AccordionTitle>
+        <AccordionTitle>2. Cotización y Reserva</AccordionTitle>
         <AccordionContent>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
           Proporcionamos una cotización detallada que incluye
@@ -33,7 +34,7 @@ reserva de la maquinaria.
         </AccordionContent>
       </AccordionPanel>
       <AccordionPanel>
-        <AccordionTitle>Entrega y Soporte Durante el Alquiler</AccordionTitle>
+        <AccordionTitle>3. Entrega y Soporte Durante el Alquiler</AccordionTitle>
         <AccordionContent>
           
           <p className="mb-2 text-gray-500 dark:text-gray-400">
@@ -45,14 +46,16 @@ durante todo el período de alquiler.
         </AccordionContent>
       </AccordionPanel>
       <AccordionPanel>
-        <AccordionTitle>Recogida y Facturación</AccordionTitle>
+        <AccordionTitle>4. Recogida y Facturación</AccordionTitle>
         <AccordionContent>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
           Al finalizar el proyecto, coordinamos la recogida
 de la maquinaria y emitimos la factura
 correspondiente por los servicios prestados.
           </p>
-          
+          <div className="flex justify-center m-4">
+    <ButtonCTA></ButtonCTA>
+  </div>
         </AccordionContent>
       </AccordionPanel>
     </Accordion>
