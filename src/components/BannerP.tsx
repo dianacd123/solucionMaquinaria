@@ -5,12 +5,12 @@ import image from "/src/assets/image.jpg"
 export default function BannerP() {
   return (
     
-    <div className="  sm:flex sm:h-auto">
-  <div className="flex-1 justify-center  p-6   bg-[#FDE502] flex flex-col">
-    <h1 className="text-[#0b0a09] font-bold  text-5xl">
+    <div className="  sm:flex md:h-[550px]">
+  <div className="flex-1 justify-center  p-10   bg-[#FDE502] flex flex-col">
+    <h1 className="text-[#0b0a09] font-bold sm:text-6xl text-5xl">
       ¿Listo para llevar su proyecto al siguiente nivel?
     </h1>
-    <h2 className="text-[#0b0a09] py-4">
+    <h2 className="text-[#0b0a09] text-lg py-8">
       ¡Contáctenos hoy mismo para conocer más sobre nuestros servicios de alquiler de maquinaria y cómo podemos ayudarle a alcanzar sus objetivos!
     </h2>
     <div className=" ">
