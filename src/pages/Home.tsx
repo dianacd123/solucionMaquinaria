@@ -1,5 +1,6 @@
 
 import BannerP from "../components/BannerP";
+import ButtonWhatsApp from "../components/ButtonWhatsApp";
 import { Component } from "../components/Footer";
 import GalleryM from "../components/GalleryM";
 import Header from "../components/Header";
@@ -18,7 +19,10 @@ export default function Home() {
         <HiringProcess></HiringProcess>
         <GalleryM></GalleryM>
         <Test></Test>
+        <ButtonWhatsApp></ButtonWhatsApp>
         <Component></Component>
+        
+
     </div>
   )
 }
