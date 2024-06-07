@@ -28,11 +28,11 @@ const Test = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 5000,
+    speed: 11000,
     slidesToShow: 3,
     slidesToScroll: 2,
     autoplay: true,
-    autoplaySpeed: 500,
+    autoplaySpeed: 600,
     cssEase: 'ease-out',
     arrows: false,
     responsive: [
