@@ -1,3 +1,4 @@
+import Menu from "./Menu";
 
 export default function Header() {
   return (
@@ -6,8 +7,8 @@ export default function Header() {
     <div className="flex-1 flex justify-left items-left">
       <h1 className="text-white font-bold text">TU SOLUCIÓN EN <br /> MAQUINARIA</h1>
     </div>
-    <div className="flex-1 w-30 flex justify-left items-left">
-      <h1 className="text-white text-2xl"></h1>
+    <div>
+      <Menu></Menu>
     </div>
     <div className="flex-1  flex justify-center items-center">
       <h1 className="text-white text">LOGOTIPO</h1>
@@ -16,3 +17,4 @@ export default function Header() {
     
   )
 }
+
