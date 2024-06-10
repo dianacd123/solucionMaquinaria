@@ -59,11 +59,11 @@ correspondiente por los servicios prestados.
         </AccordionContent>
       </AccordionPanel>
     </Accordion>
-    <div className="flex-1 flex">
+    
+  </div>
+  <div className="flex-1 flex m-4">
     <img className="h-full object-cover rounded-md" src={image} alt="" />
   </div>
-  </div>
-  
 </div>
 
   );
