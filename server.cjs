@@ -2,21 +2,21 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config({ path: './cred.env' }); // Carga las variables de entorno desde el archivo cred.env
 
 const app = express();
 const PORT = 3000;
 
-// Configuración del servicio SMTP de Gmail
+// Configuración del servicio SMTP de Outlook
 const transporter = nodemailer.createTransport({
   host: 'smtp-mail.outlook.com',
   port: 587,
   secure: false,
   auth: {
-    user: 'CotizacionM@outlook.com', // Tu dirección de correo electrónico de Outlook
-    pass: 'marketconnect123', // Tu contraseña de Outlook
+    user: process.env.EMAIL_USER, // Utiliza la variable de entorno para el usuario
+    pass: process.env.EMAIL_PASS, // Utiliza la variable de entorno para la contraseña
   },
 });
-
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -26,7 +26,7 @@ app.post('/send-email', async (req, res) => {
 
   // Contenido del correo electrónico
   const mailOptions = {
-    from: 'CotizacionM@outlook.com', // Remitente
+    from: process.env.EMAIL_USER, // Remitente
     to: 'asalvadormartinezc@gmail.com', // Destinatario
     subject: 'Nueva Cotización',
     text: `Nombre: ${nombre}\nCorreo: ${email}\nTeléfono: ${telefono}\nDetalles del Proyecto: ${proyecto}\nMaquinaria Necesaria: ${maquinaria}`,

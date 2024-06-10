@@ -32,7 +32,7 @@ const Test = () => {
     slidesToShow: 3,
     slidesToScroll: 2,
     autoplay: true,
-    autoplaySpeed: 600,
+    autoplaySpeed: 800,
     cssEase: 'ease-out',
     arrows: false,
     responsive: [
