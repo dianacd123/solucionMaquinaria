@@ -19,12 +19,12 @@ const Card = ({ title, imageSrc, description1, description2, description3, descr
     >
       <img src={imageSrc} alt={title} />
       <div className="card-content">
-        <h3 className="mb-2 text-gray-500 dark:text-gray-400 text-center">{title}</h3>
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description1}</p>}
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description2}</p>}
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description3}</p>}
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description4}</p>}
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description5}</p>}
+        <h3 className="m-4 text-[#FDE502] text-xl dark:text-gray-400 text-center">{title}</h3>
+        {isHovered && <p className="mb-2 text-gray-300 dark:text-gray-400 text-left">{description1}</p>}
+        {isHovered && <p className="mb-2 text-gray-300 dark:text-gray-400 text-left">{description2}</p>}
+        {isHovered && <p className="mb-2 text-gray-300 dark:text-gray-400 text-left">{description3}</p>}
+        {isHovered && <p className="mb-2 text-gray-300 dark:text-gray-400 text-left">{description4}</p>}
+        {isHovered && <p className="mb-2 text-gray-300 dark:text-gray-400 text-left">{description5}</p>}
       </div>
     </div>
   );

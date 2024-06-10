@@ -20,41 +20,41 @@ export function Component() {
         <div>
           <FooterTitle className="text-x1 font-bold text-white" title="EXPLORA" />
           <FooterLinkGroup col className="text-white">
-            <FooterLink className="text-gray-300" href="#">¿Quienes somos?</FooterLink>
-            <FooterLink className="text-gray-300" href="#">Servicios</FooterLink>
-            <FooterLink className="text-gray-300" href="#">Maquinaria</FooterLink>
-            <FooterLink className="text-gray-300" href="#">Testimonios</FooterLink>
+            <FooterLink className="text-gray-200" href="#">¿Quienes somos?</FooterLink>
+            <FooterLink className="text-gray-200" href="#">Servicios</FooterLink>
+            <FooterLink className="text-gray-200" href="#">Maquinaria</FooterLink>
+            <FooterLink className="text-gray-200" href="#">Testimonios</FooterLink>
           </FooterLinkGroup>
         </div>
         <div>
         <div>
           <FooterTitle className="text-x1 font-bold text-white" title="LEGAL" />
           <FooterLinkGroup col className="text-white">
-            <FooterLink className="text-gray-300" href="#">Políticas de Privacidad</FooterLink>
-            <FooterLink className="text-gray-300" href="#">Términos &amp; Condiciones</FooterLink>
+            <FooterLink className="text-gray-200" href="#">Políticas de Privacidad</FooterLink>
+            <FooterLink className="text-gray-200" href="#">Términos &amp; Condiciones</FooterLink>
           </FooterLinkGroup>
         </div>
         <br></br>
           <FooterTitle className="text-x1 font-bold text-white" title="SIGUENOS" />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-left">
-            <FooterIcon className="text-gray-300" href="#" icon={BsFacebook} />
-            <FooterIcon className="text-gray-300" href="#" icon={BsInstagram} />
-            <FooterIcon className="text-gray-300" href="#" icon={BsTwitter} />
-            <FooterIcon className="text-gray-300" href="#" icon={BsTiktok} />
+            <FooterIcon className="text-gray-200" href="#" icon={BsFacebook} />
+            <FooterIcon className="text-gray-200" href="#" icon={BsInstagram} />
+            <FooterIcon className="text-gray-200" href="#" icon={BsTwitter} />
+            <FooterIcon className="text-gray-200" href="#" icon={BsTiktok} />
           </div>
         </div>
         <div>
           <FooterTitle className="text-x1 font-bold text-white" title="Servicio al cliente" />
           <FooterLinkGroup col className="text-white">
           <div className="text-white">
-            <p className="text-sm text-gray-300">Teléfono: (999) 123 4567</p>
-            <p className="text-sm text-gray-300">Dirección: Calle 56, Mérida, 97000</p>
-            <p className="text-sm text-gray-300">Email: hola@sitioincreible.mx</p>
+            <p className="text-sm text-gray-200">Dirección: Calle 56, Mérida, 97000</p>
+            <p className="text-sm text-gray-200">Teléfono: (999) 123 4567</p>
+            <p className="text-sm text-gray-200">Email: hola@sitioincreible.mx</p>
           </div>
           </FooterLinkGroup>
         </div>
       </div>
-      <FooterDivider className="my-8" />
+      <FooterDivider className="my-6" />
       <div className="w-full flex items-center justify-center">
   <FooterCopyright className="text-white" href="#" by="Tu solución en maquinaria™" year={2024} />
 </div>
