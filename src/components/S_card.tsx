@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react';
 
 const Card = ({ title, imageSrc, description1, description2, description3, description4, description5 }) => {
   const [isHovered, setIsHovered] = useState(false);
