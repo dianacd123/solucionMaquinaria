@@ -1,5 +1,4 @@
 import Card from '../components/S_card';
-import '../Nservicios.css';
 import imagen2 from '../assets/Imagen2.jpg';
 import imagen3 from '../assets/Imagen3.jpg';
 import imagen4 from '../assets/Imagen4.jpg';
@@ -8,18 +7,18 @@ const ServicesP = () => {
     const estiloH1 = {
         border: '2px solid #fde502',
         padding: '15px',
-        backgroundColor: '#fde502' // Fondo amarillo claro
+        backgroundColor: '#fde502', // Fondo amarillo claro
     };
 
     return (
         <div className="flex flex-col items-center justify-center h-full bg-[#0B0A09] p-20 sm:flex-row sm:h-auto">
             <section className="portafolio">
-                <div className="contenedor">
+                <div className="container mx-auto">
                     <h2 className="text-4xl font-bold text-black text-center md:text-5xl" style={estiloH1}>
                         Nuestros Servicios
                     </h2>
                     <br />
-                    <div className="imagen-port">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         <Card
                             title="Alquiler de Maquinaria"
                             imageSrc={imagen2}
