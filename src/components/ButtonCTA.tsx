@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 export function ButtonCTA() {
   const [openModal, setOpenModal] = useState(false);
   const emailInputRef = useRef<HTMLInputElement>(null);
+  const [notification, setNotification] = useState<{ type: "success" | "error"; message: string } | null>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -27,14 +28,24 @@ export function ButtonCTA() {
       });
 
       if (response.ok) {
-        alert('Cotización enviada con éxito');
+        setNotification({ type: "success", message: "Cotización enviada con éxito" });
         setOpenModal(false);
       } else {
-        alert('Error al enviar la cotización');
+        setNotification({ type: "error", message: "Error al enviar la cotización" });
       }
+
+      setTimeout(() => {
+        setNotification(null);
+      }, 5000);
+      
     } catch (error) {
-      alert('Error al enviar la cotización');
+      setNotification({ type: "error", message: "Error al enviar la cotización" });
       console.error('Error:', error);
+
+      
+      setTimeout(() => {
+        setNotification(null);
+      }, 5000);
     }
   };
 
@@ -80,6 +91,11 @@ export function ButtonCTA() {
           </div>
         </Modal.Body>
       </Modal>
+      {notification && (
+        <div className={`fixed top-0 left-0 right-0 z-50 bg-${notification.type === 'success' ? 'green' : 'red'}-500 text-white text-center py-4`}>
+          {notification.message}
+        </div>
+      )}
     </>
   );
 }
