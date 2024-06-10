@@ -27,8 +27,8 @@ const Card: React.FC<CardProps> = ({ title, imageSrc, description1}) => {
     >
       <img src={imageSrc} alt={title} />
       <div className="card-content">
-        <h3 className="mb-2 text-gray-500 dark:text-gray-400 text-center">{title}</h3>
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description1}</p>}
+        <h3 className="m-4 text-[#FDE502] dark:text-gray-400 text-xl  text-center">{title}</h3>
+        {isHovered && <p className="mb-2 text-gray-300 dark:text-gray-400 text-left">{description1}</p>}
       </div>
     </div>
   );
