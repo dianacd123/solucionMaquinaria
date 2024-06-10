@@ -2,7 +2,7 @@ import { Button } from 'flowbite-react';
 import { BsWhatsapp } from "react-icons/bs";
 
 export default function ButtonWhatsApp() {
-    const phoneNumber = '+52 55 87674615'; 
+    const phoneNumber = '+52 1 56 1167 8552'; 
     const message = 'Hola! Me gustaría obtener más información.'; 
   
     const WhatsAppLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
