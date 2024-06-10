@@ -14,7 +14,7 @@ export function HiringProcess() {
       <AccordionPanel>
         <AccordionTitle>1. Consulta y Asesoramiento Inicial</AccordionTitle>
         <AccordionContent>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
+          <p className="mb-2 text-gray-300 dark:text-gray-400">
           El cliente se pone en contacto con nosotros y nos
 proporciona detalles sobre su proyecto.
           </p>
@@ -24,7 +24,7 @@ proporciona detalles sobre su proyecto.
       <AccordionPanel>
         <AccordionTitle>2. Cotización y Reserva</AccordionTitle>
         <AccordionContent>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
+          <p className="mb-2 text-gray-300 dark:text-gray-400">
           Proporcionamos una cotización detallada que incluye
 el costo del alquiler de la maquinaria y una vez que el
 cliente aprueba la cotización, procedemos a la
@@ -37,7 +37,7 @@ reserva de la maquinaria.
         <AccordionTitle>3. Entrega y Soporte Durante el Alquiler</AccordionTitle>
         <AccordionContent>
           
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
+          <p className="mb-2 text-gray-300 dark:text-gray-400">
           Coordinamos la entrega de la maquinaria al lugar de
 trabajo del cliente y proporcionamos soporte técnico
 durante todo el período de alquiler.
@@ -48,7 +48,7 @@ durante todo el período de alquiler.
       <AccordionPanel>
         <AccordionTitle>4. Recogida y Facturación</AccordionTitle>
         <AccordionContent>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
+          <p className="mb-2 text-gray-300 dark:text-gray-400">
           Al finalizar el proyecto, coordinamos la recogida
 de la maquinaria y emitimos la factura
 correspondiente por los servicios prestados.
@@ -59,10 +59,11 @@ correspondiente por los servicios prestados.
         </AccordionContent>
       </AccordionPanel>
     </Accordion>
+    <div className="flex-1 flex">
+    <img className="h-full object-cover rounded-md" src={image} alt="" />
   </div>
-  <div className="flex-1 flex">
-    <img className="h-auto object-cover rounded-md" src={image} alt="" />
   </div>
+  
 </div>
 
   );
