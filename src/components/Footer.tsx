@@ -20,7 +20,7 @@ export function Component() {
         <div>
           <FooterTitle className="text-x1 font-bold text-white" title="EXPLORA" />
           <FooterLinkGroup col className="text-white">
-            <FooterLink className="text-gray-200" href="#QuienesSomos">¿Quienes somos?</FooterLink>
+            <FooterLink className="text-gray-200" href="#QuienesSomos">¿Quiénes somos?</FooterLink>
             <FooterLink className="text-gray-200" href="#Servicios">Servicios</FooterLink>
             <FooterLink className="text-gray-200" href="#Contratacion">Contratación</FooterLink>
             <FooterLink className="text-gray-200" href="#Maquinaria">Maquinaria</FooterLink>
