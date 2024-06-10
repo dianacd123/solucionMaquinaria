@@ -25,7 +25,7 @@ app.post('/send-email', async (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'dianauss@live.com',
+    to: 'gsanchez@promarketconnect.com',
     subject: 'Nueva Cotización',
     text: `Nombre: ${nombre}\nCorreo: ${email}\nTeléfono: ${telefono}\nDetalles del Proyecto: ${proyecto}\nMaquinaria Necesaria: ${maquinaria}`,
   };
