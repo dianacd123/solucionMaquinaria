@@ -72,7 +72,7 @@ const Test = () => {
                 <div key={index} className="px-2">
                   <div className="bg-black p-6 rounded-lg text-center h-full flex flex-col justify-between">
                     <div className="bg-[#fde502] flex-1 flex flex-col justify-center py-7 rounded-sm" >
-                      <img src={testimonio.imagen} alt={testimonio.nombre} className="w-20 h-20 rounded-full mx-auto mb-4" />
+                      <img src={testimonio.imagen} alt={testimonio.nombre} className="w-20 h-20 rounded-full object-cover mx-auto mb-4" />
                       <h3 className="text-xl font-bold text-black mb-2">{testimonio.nombre}</h3>
                     </div>
                     <div className="bg-white p-6 rounded-b-lg">
