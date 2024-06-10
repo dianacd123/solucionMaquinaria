@@ -8,7 +8,7 @@ import m5 from "/src/assets/maqui5.jpg"
 export default function GalleryM() {
   return (
     
-<div className="bg-[#0B0A09] p-20">
+<div id="Maquinaria" className="bg-[#0B0A09] p-20">
   <div className="flex justify-center mb-8">
     <h1 className="text-[#FDE502] font-bold text-5xl">MAQUINARIA DISPONIBLE</h1>
   </div>

@@ -11,7 +11,7 @@ const ServicesP = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center h-full bg-[#0B0A09] p-20 sm:flex-row sm:h-auto">
+        <div id="Servicios" className="flex flex-col items-center justify-center h-full bg-[#0B0A09] p-20 sm:flex-row sm:h-auto">
             <section className="portafolio">
                 <div className="container mx-auto">
                     <h2 className="text-4xl font-bold text-black text-center md:text-5xl" style={estiloH1}>

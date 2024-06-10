@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionPanel, AccordionTitle } from "flo
 
 export function HiringProcess() {
   return (
-    <div className="h-full bg-[#0B0A09] p-20  sm:flex sm:h-auto">
+    <div id="Contratacion" className="h-full bg-[#0B0A09] p-20  sm:flex sm:h-auto">
   <div className="w-full sm:w-1/2 p-4">
   <div className="flex justify-center mb-8">
     <h1 className="text-[#FDE502] font-bold text-5xl">PROCESO DE CONTRATACIÓN</h1>

@@ -54,7 +54,7 @@ const Test = () => {
   };
 
   return (
-    <div className="bg-black font-poppins min-h-2">
+    <div id='Testimonios' className="bg-black font-poppins min-h-2">
       <div className="text-center py-10">
         <h2 className="text-5xl font-bold text-[#fde502]">Usuarios de <br /> "Tu solución en Maquinarias" satisfechos</h2>
       </div>
