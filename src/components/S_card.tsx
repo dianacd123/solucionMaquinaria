@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 
-const Card = ({ title, imageSrc, description1, description2, description3, description4, description5 }) => {
-  const [isHovered, setIsHovered] = useState(false);
+// Definición de la interfaz para los props
+interface CardProps {
+  title: string;
+  imageSrc: string;
+  description1: string;
+}
+
+// Componente funcional en TypeScript
+const Card: React.FC<CardProps> = ({ title, imageSrc, description1}) => {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -19,12 +27,8 @@ const Card = ({ title, imageSrc, description1, description2, description3, descr
     >
       <img src={imageSrc} alt={title} />
       <div className="card-content">
-        <h3 className="mb-2 text-gray-500 dark:text-gray-400 text-center">{title}</h3>
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description1}</p>}
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description2}</p>}
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description3}</p>}
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description4}</p>}
-        {isHovered && <p className="mb-2 text-gray-500 dark:text-gray-400 text-justify">{description5}</p>}
+        <h3 className="m-4 text-[#FDE502] dark:text-gray-400 text-xl  text-center">{title}</h3>
+        {isHovered && <p className="mb-2 text-gray-300 dark:text-gray-400 text-left">{description1}</p>}
       </div>
     </div>
   );

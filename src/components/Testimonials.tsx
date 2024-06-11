@@ -54,9 +54,9 @@ const Test = () => {
   };
 
   return (
-    <div className="bg-black font-poppins min-h-2">
+    <div id='Testimonios' className="bg-black font-poppins min-h-2">
       <div className="text-center py-10">
-        <h2 className="text-6xl font-bold text-[#fde502]">Usuarios de "Tu solución en Maquinarias" satisfechos</h2>
+        <h2 className="text-5xl font-bold text-[#fde502]">Usuarios de <br /> "Tu solución en Maquinarias" satisfechos</h2>
       </div>
 
       <motion.div
@@ -66,17 +66,17 @@ const Test = () => {
         viewport={{ once: false, amount: 0.7 }}
       >
         <section className=" bg-black text-white">
-          <div className="w-full ">
+          <div className="w-full pb-6">
             <Slider {...settings}>
               {testimonios.map((testimonio, index) => (
-                <div key={index} className="px-2">
+                <div key={index} className="px-4">
                   <div className="bg-black p-6 rounded-lg text-center h-full flex flex-col justify-between">
                     <div className="bg-[#fde502] flex-1 flex flex-col justify-center py-7 rounded-sm" >
-                      <img src={testimonio.imagen} alt={testimonio.nombre} className="w-20 h-20 rounded-full mx-auto mb-4" />
-                      <h3 className="text-xl font-bold text-black mb-2">{testimonio.nombre}</h3>
+                      <img src={testimonio.imagen} alt={testimonio.nombre} className="w-20 h-20 rounded-full object-cover mx-auto mb-4" />
+                      <h3 className="text-2xl font-bold text-black mb-2">{testimonio.nombre}</h3>
                     </div>
                     <div className="bg-white p-6 rounded-b-lg">
-                      <p className="text-md font-medium text-black md:text-lg">
+                      <p className="text-md font-medium text-black md:text-md">
                         {testimonio.testimonio}
                       </p>
                     </div>
