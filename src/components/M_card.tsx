@@ -26,11 +26,11 @@ const MCard: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-around p-4 md:p-20">
+    <div className="flex flex-wrap justify-around p-4 md:p-2"> 
       {cards.map((card, index) => (
         <div
           key={index}
-          className="max-w-sm rounded overflow-hidden shadow-lg bg-[#0B0A09] border-2 border-[#FDE502] m-4 transform transition duration-500 hover:scale-105 hover:shadow-2xl"
+          className="max-w-sm rounded overflow-hidden shadow-lg bg-[#0B0A09] border-2 border-[#FDE502] m-2 md:m-4 transform transition duration-500 hover:scale-105 hover:shadow-2xl"
           style={{ minWidth: '280px', maxWidth: '300px' }}
         >
           <div className="px-6 py-4">
@@ -55,3 +55,4 @@ const MCard: React.FC = () => {
 };
 
 export default MCard;
+
