@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MCard: React.FC = () => {
   const cards = [
@@ -42,9 +43,10 @@ const MCard: React.FC = () => {
             </p>
           </div>
           <div className="px-6 pb-5">
+            <Link to="/ProductDetail">
             <button className="block w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 transform transition duration-500 hover:scale-110">
               Ver detalles
-            </button>
+            </button></Link>
           </div>
         </div>
       ))}
