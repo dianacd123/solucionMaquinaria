@@ -25,14 +25,18 @@ export default function DetailM() {
         <p className="leading-relaxed mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, voluptatibus aspernatur? Porro, similique ut. Itaque adipisci minima reiciendis cupiditate, saepe sunt at labore doloremque voluptas ab quos a, cum tempore. </p>
         <div className="flex border-t border-gray-200 py-2">
           <span className="text-gray-500">Peso Operacional</span>
-          <span className="ml-auto text-gray-900">Blue</span>
+          <span className="ml-auto text-gray-900">Aprox. 21,500 kg (47,400 lbs)</span>
         </div>
         <div className="flex border-t border-gray-200 py-2">
-          <span className="text-gray-500">Size</span>
-          <span className="ml-auto text-gray-900">Medium</span>
+          <span className="text-gray-500">Motor</span>
+          <span className="ml-auto text-gray-900">Motor CAT C6.6 ACERT</span>
         </div>
         <div className="flex border-t border-b mb-6 border-gray-200 py-2">
-          <span className="text-gray-500">Quantity</span>
+          <span className="text-gray-500">Potencia</span>
+          <span className="ml-auto text-gray-900">4</span>
+        </div>
+        <div className="flex border-t border-b mb-6 border-gray-200 py-2">
+          <span className="text-gray-500">Capacidad del Balde</span>
           <span className="ml-auto text-gray-900">4</span>
         </div>
         <div className="flex">
