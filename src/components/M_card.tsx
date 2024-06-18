@@ -3,7 +3,7 @@ import React from 'react';
 const MCard: React.FC = () => {
   const cards = [
     {
-      title: "retroexcavadora caterpillar 420F",
+      title: "Retroexcavadora caterpillar 420F",
       image: "../src/assets/B420FNB.png",
       description: "Retroexcavadora con un peso de 8.50 toneladas, cuchara de 2.34 m de ancho y 1.00 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.50 m."
     },
@@ -13,7 +13,7 @@ const MCard: React.FC = () => {
       description: "Excavadora caterpillar con un peso de 20-23 toneladas, cuchara de 1.00 m de ancho y 1.00-1.20 m³ de capacidad. Tracción en orugas y longitud de transporte de 9.70 m."
     },
     {
-      title: "retroexcavadora caterpillar 416F",
+      title: "Retroexcavadora caterpillar 416F",
       image: "../src/assets/B416FNB.png",
       description: "Retroexcavadora con un peso de 7.21 toneladas, cuchara de 2.26 m de ancho y 0.76 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.08 m."
     },
