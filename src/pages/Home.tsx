@@ -1,4 +1,3 @@
-
 import BannerP from "../components/BannerP";
 import ButtonWhatsApp from "../components/ButtonWhatsApp";
 import { Component } from "../components/Footer";
@@ -16,7 +15,12 @@ export default function Home() {
     <div>
         <Header></Header>
         <BannerP></BannerP>
-        <M_card></M_card>
+        <section id="cards-section" className="py-8">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-4 text-center">Nuestras Maquinarias</h2>
+          <M_card></M_card>
+        </div>
+      </section>
         <QuienesS></QuienesS>
         <ServicesP></ServicesP>
         <HiringProcess></HiringProcess>
