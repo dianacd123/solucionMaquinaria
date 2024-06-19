@@ -1,7 +1,7 @@
 import BannerP from "../components/BannerP";
 import ButtonWhatsApp from "../components/ButtonWhatsApp";
 import { Component } from "../components/Footer";
-import GalleryM from "../components/GalleryM";
+import Gallery from "../components/Gallery";
 import Header from "../components/Header";
 import { HiringProcess } from "../components/HiringProcess";
 import QuienesS from "../components/QuienesS";
@@ -24,7 +24,7 @@ export default function Home() {
         <QuienesS></QuienesS>
         <ServicesP></ServicesP>
         <HiringProcess></HiringProcess>
-        <GalleryM></GalleryM>
+        <Gallery></Gallery>
         <Test></Test>
         <ButtonWhatsApp></ButtonWhatsApp>
         <Component></Component>
