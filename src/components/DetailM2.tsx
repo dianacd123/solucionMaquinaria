@@ -1,10 +1,10 @@
-import image from "/src/assets/B420FNB.png"
-import Header from "../components/Header";
-import { Component } from "../components/Footer";
+import image from "/src/assets/B320NB.png"
+import Header from "./Header";
+import { Component } from "./Footer";
 import ButtonWhatsApp from "./ButtonWhatsApp";
 import { ButtonCTA } from "./ButtonCTA";
 
-export default function DetailM() {
+export default function DetailM2() {
   return (
     
    
@@ -17,12 +17,12 @@ export default function DetailM() {
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
       <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
         <h2 className="text-sm title-font text-gray-500 tracking-widest">TU SOLUCION EN MAQUINARIA</h2>
-        <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">Retroexcavadora caterpillar 420F</h1>
+        <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">Excavadora caterpillar 320</h1>
         <div className="flex mb-4">
           <a className="flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">Descripción</a>
           
         </div>
-        <p className="leading-relaxed mb-4">Retroexcavadora con un peso de 8.50 toneladas, cuchara de 2.34 m de ancho y 1.00 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.50 m. </p>
+        <p className="leading-relaxed mb-4">Excavadora caterpillar con un peso de 20-23 toneladas, cuchara de 1.00 m de ancho y 1.00-1.20 m³ de capacidad. Tracción en orugas y longitud de transporte de 9.70 m. </p>
         <div className="flex border-t border-gray-200 py-2">
           <span className="text-gray-500">Peso Operacional</span>
           <span className="ml-auto text-gray-900">Aprox. 21,500 kg (47,400 lbs)</span>
@@ -42,7 +42,7 @@ export default function DetailM() {
         <div className="flex">
           <span className="title-font font-medium text-2xl text-gray-900 hidden">$58.00</span>
           <ButtonCTA></ButtonCTA>
-          <button className="rounded-full w-10 h-10 hidden bg-gray-200 p-0 border-0  items-center justify-center  text-gray-500 ml-4">
+          <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 hidden items-center justify-center  text-gray-500 ml-4">
             <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5 hidden" viewBox="0 0 24 24">
               <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
             </svg>

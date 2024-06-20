@@ -8,22 +8,26 @@ const MCard: React.FC = () => {
     {
       title: "Retroexcavadora caterpillar 420F",
       image: "../src/assets/B420FNB.png",
-      description: "Retroexcavadora con un peso de 8.50 toneladas, cuchara de 2.34 m de ancho y 1.00 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.50 m."
+      description: "Retroexcavadora con un peso de 8.50 toneladas, cuchara de 2.34 m de ancho y 1.00 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.50 m.",
+      linkdetail: "./ProductDetail1"
     },
     {
       title: "Excavadora caterpillar 320",
       image: "../src/assets/B320NB.png",
-      description: "Excavadora caterpillar con un peso de 20-23 toneladas, cuchara de 1.00 m de ancho y 1.00-1.20 m³ de capacidad. Tracción en orugas y longitud de transporte de 9.70 m."
+      description: "Excavadora caterpillar con un peso de 20-23 toneladas, cuchara de 1.00 m de ancho y 1.00-1.20 m³ de capacidad. Tracción en orugas y longitud de transporte de 9.70 m.",
+      linkdetail: "./ProductDetail2"
     },
     {
       title: "Retroexcavadora caterpillar 416F",
       image: "../src/assets/B416FNB.png",
-      description: "Retroexcavadora con un peso de 7.21 toneladas, cuchara de 2.26 m de ancho y 0.76 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.08 m."
+      description: "Retroexcavadora con un peso de 7.21 toneladas, cuchara de 2.26 m de ancho y 0.76 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.08 m.",
+      linkdetail: "./ProductDetail3"
     },
     {
       title: "Excavadora caterpillar 320E",
       image: "../src/assets/B320EP.png",
-      description: "Excavadora con un peso de 22.5 toneladas, cuchara de 1.00 m de ancho y 1.19 m³ de capacidad. Tracción en orugas y longitud de transporte de 9.54 m."
+      description: "Excavadora con un peso de 22.5 toneladas, cuchara de 1.00 m de ancho y 1.19 m³ de capacidad. Tracción en orugas y longitud de transporte de 9.54 m.",
+      linkdetail: "./ProductDetail4"
     },
     
   ];
@@ -78,8 +82,8 @@ const MCard: React.FC = () => {
               </p>
             </div>
             <div className="px-6 pb-5 w-full">
-              <Link to="/ProductDetail" className="w-full">
-                <button className="block w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 transform transition duration-500 hover:scale-110">
+              <Link to={card.linkdetail || '#'} className="w-full">
+                <button  className="block w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 transform transition duration-500 hover:scale-110">
                   Ver detalles
                 </button>
               </Link>
