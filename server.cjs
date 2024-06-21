@@ -17,7 +17,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.use(cors());
+app.use(cors({ origin: 'https://rentamaquinaria.promarketconnect.com' }));
+
 app.use(bodyParser.json());
 
 app.post('/send-email', async (req, res) => {

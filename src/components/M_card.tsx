@@ -3,33 +3,38 @@ import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
+// Importa las imágenes
+import B420FNB from '../assets/B420FNB.png';
+import B320NB from '../assets/B320NB.png';
+import B416FNB from '../assets/B416FNB.png';
+import B320EP from '../assets/B320EP.png';
+
 const MCard: React.FC = () => {
   const cards = [
     {
       title: "Retroexcavadora caterpillar 420F",
-      image: "../src/assets/B420FNB.png",
+      image: B420FNB,
       description: "Retroexcavadora con un peso de 8.50 toneladas, cuchara de 2.34 m de ancho y 1.00 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.50 m.",
       linkdetail: "./ProductDetail1"
     },
     {
       title: "Excavadora caterpillar 320",
-      image: "../src/assets/B320NB.png",
+      image: B320NB,
       description: "Excavadora caterpillar con un peso de 20-23 toneladas, cuchara de 1.00 m de ancho y 1.00-1.20 m³ de capacidad. Tracción en orugas y longitud de transporte de 9.70 m.",
       linkdetail: "./ProductDetail2"
     },
     {
       title: "Retroexcavadora caterpillar 416F",
-      image: "../src/assets/B416FNB.png",
+      image: B416FNB,
       description: "Retroexcavadora con un peso de 7.21 toneladas, cuchara de 2.26 m de ancho y 0.76 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.08 m.",
       linkdetail: "./ProductDetail3"
     },
     {
       title: "Excavadora caterpillar 320E",
-      image: "../src/assets/B320EP.png",
+      image: B320EP,
       description: "Excavadora con un peso de 22.5 toneladas, cuchara de 1.00 m de ancho y 1.19 m³ de capacidad. Tracción en orugas y longitud de transporte de 9.54 m.",
       linkdetail: "./ProductDetail4"
     },
-    
   ];
 
   const responsive = {
@@ -60,7 +65,7 @@ const MCard: React.FC = () => {
         autoPlay={true}
         autoPlaySpeed={5000}
         keyBoardControl={true}
-         customTransition="transform 500ms ease-in-out"
+        customTransition="transform 500ms ease-in-out"
         transitionDuration={500}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -83,7 +88,7 @@ const MCard: React.FC = () => {
             </div>
             <div className="px-6 pb-5 w-full">
               <Link to={card.linkdetail || '#'} className="w-full">
-                <button  className="block w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 transform transition duration-500 hover:scale-110">
+                <button className="block w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 transform transition duration-500 hover:scale-110">
                   Ver detalles
                 </button>
               </Link>

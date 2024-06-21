@@ -16,10 +16,11 @@ export function ButtonCTA() {
       telefono: formData.get('telefono') as string,
       proyecto: formData.get('proyecto') as string,
       maquinaria: formData.get('maquinaria') as string,
+      tipo: formData.get('tipo') as string,  // Nueva opción
     };
 
     try {
-      const response = await fetch('http://localhost:3000/send-email', {
+      const response = await fetch('https://rentamaquinaria.promarketconnect.com/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,12 +38,11 @@ export function ButtonCTA() {
       setTimeout(() => {
         setNotification(null);
       }, 5000);
-      
+
     } catch (error) {
       setNotification({ type: "error", message: "Error al enviar la cotización" });
       console.error('Error:', error);
 
-      
       setTimeout(() => {
         setNotification(null);
       }, 5000);
@@ -84,6 +84,13 @@ export function ButtonCTA() {
                   <option>Otro</option>
                 </select>
               </div>
+              <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="tipo">Tipo de Solicitud</label>
+                <select className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tipo" name="tipo">
+                  <option>Renta</option>
+                  <option>Compra</option>
+                </select>
+              </div>
               <div className="flex items-center justify-between">
                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Enviar Cotización</button>
               </div>
@@ -99,3 +106,4 @@ export function ButtonCTA() {
     </>
   );
 }
+
