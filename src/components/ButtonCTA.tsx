@@ -16,7 +16,7 @@ export function ButtonCTA() {
       telefono: formData.get('telefono') as string,
       proyecto: formData.get('proyecto') as string,
       maquinaria: formData.get('maquinaria') as string,
-      tipo: formData.get('tipo') as string,  // Nueva opción
+      tipo: formData.get('tipo') as string,  
     };
 
     try {
