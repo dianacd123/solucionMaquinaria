@@ -16,7 +16,7 @@ export default function Home() {
         <Header></Header>
         <BannerP></BannerP>
         <section id="cards-section" className="py-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center">
           <h2 className="text-yellow-300 font-bold text-5xl">Nuestras Maquinarias</h2>
           <M_card></M_card>
         </div>
