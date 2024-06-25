@@ -8,8 +8,9 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+
 const corsOptions = {
-  origin: ['https://rentamaquinaria.promarketconnect.com/', 'http://localhost:5173', 'http://localhost:3000'],
+  origin: 'https://rentamaquinaria.promarketconnect.com', 
   optionsSuccessStatus: 200,
 };
 
