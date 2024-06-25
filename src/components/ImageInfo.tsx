@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Asegúrate de importar Link si estás usando react-router
+import { Link } from 'react-router-dom';
 import { ButtonCTA } from "./ButtonCTA";
 
 interface ImageInfoProps {
   src: string;
   alt: string;
   info: string;
+  link: string; // Nueva prop para el enlace
 }
 
-const ImageInfo: React.FC<ImageInfoProps> = ({ src, alt, info }) => {
+const ImageInfo: React.FC<ImageInfoProps> = ({ src, alt, info, link }) => {
   const [showInfo, setShowInfo] = useState(false);
 
   const handleMouseEnter = () => {
@@ -24,14 +25,14 @@ const ImageInfo: React.FC<ImageInfoProps> = ({ src, alt, info }) => {
     flexDirection: 'column',
     alignItems: 'center',
     cursor: 'pointer',
-    marginBottom: showInfo ? '160px' : '20px', // Adjust the margin when info is shown
-    width: '300px', // Fixed width for all images
+    marginBottom: showInfo ? '160px' : '20px',
+    width: '300px',
   };
 
   const imageStyle: React.CSSProperties = {
-    width: '300px', // Fixed width for all images
-    height: '200px', // Fixed height for all images
-    objectFit: 'cover', // Ensures the image covers the entire area without distortion
+    width: '300px',
+    height: '200px',
+    objectFit: 'cover',
   };
 
   const infoStyle: React.CSSProperties = {
@@ -54,7 +55,7 @@ const ImageInfo: React.FC<ImageInfoProps> = ({ src, alt, info }) => {
   const linkButtonStyle: React.CSSProperties = {
     display: 'block',
     width: '100%',
-    backgroundColor: '#1E40AF', // bg-blue-500
+    backgroundColor: '#1E40AF',
     color: 'white',
     fontWeight: 'bold',
     padding: '10px 20px',
@@ -63,7 +64,6 @@ const ImageInfo: React.FC<ImageInfoProps> = ({ src, alt, info }) => {
     textAlign: 'center',
     transition: 'transform 0.5s',
   };
-
 
   return (
     <div
@@ -81,7 +81,7 @@ const ImageInfo: React.FC<ImageInfoProps> = ({ src, alt, info }) => {
           <p>{info}</p>
           <div style={buttonContainerStyle}>
             <ButtonCTA />
-            <Link to="/ProductDetail">
+            <Link to={link}>
               <button style={linkButtonStyle} className="transform transition duration-500 hover:scale-110">
                 Ver detalles
               </button>
