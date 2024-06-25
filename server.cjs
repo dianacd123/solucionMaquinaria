@@ -5,7 +5,27 @@ const cors = require('cors');
 require('dotenv').config({ path: './cred.env' });
 
 const app = express();
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  next();
+});
+
 const PORT = process.env.PORT || 3000;
+
+const corsOptions = {
+  origin: 'http://localhost:5173',
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions)); 
+app.use(bodyParser.json());
+
+console.log('Email User:', process.env.EMAIL_USER);
+console.log('Email Pass:', process.env.EMAIL_PASS);
 
 const transporter = nodemailer.createTransport({
   host: 'smtp-mail.outlook.com',
@@ -17,8 +37,15 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.use(cors({ origin: 'https://rentamaquinaria.promarketconnect.com' }));
+transporter.verify((error, success) => {
+  if (error) {
+    console.error('Error al conectar con el servidor de correo:', error);
+  } else {
+    console.log('Servidor de correo conectado:', success);
+  }
+});
 
+app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(bodyParser.json());
 
 app.post('/send-email', async (req, res) => {
@@ -26,21 +53,22 @@ app.post('/send-email', async (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'gsanchez@promarketconnect.com',
+    to: 'asalvadormartinezc@gmail.com',
     subject: 'Nueva Cotización',
     text: `Nombre: ${nombre}\nCorreo: ${email}\nTeléfono: ${telefono}\nDetalles del Proyecto: ${proyecto}\nMaquinaria Necesaria: ${maquinaria}\nTipo de Solicitud: ${tipo}`,
   };
 
+ 
   try {
+   
     const info = await transporter.sendMail(mailOptions);
-    console.log('\x1b[32m', 'Correo enviado:', info.messageId);
+    console.log('Correo enviado:', info.messageId);
     res.status(200).send('Correo enviado con éxito');
   } catch (error) {
-    console.error('\x1b[31m', 'Error al enviar el correo:', error);
+    console.error('Error al enviar el correo:', error);
     res.status(500).send('Error al enviar el correo');
   }
 });
-
 app.listen(PORT, () => {
-  console.log('\x1b[36m', `Servidor ejecutándose en el puerto ${PORT}`);
+  console.log(`Servidor ejecutándose en el puerto ${PORT}`);
 });

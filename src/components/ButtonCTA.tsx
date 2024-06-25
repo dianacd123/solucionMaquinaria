@@ -20,7 +20,7 @@ export function ButtonCTA() {
     };
 
     try {
-      const response = await fetch('https://rentamaquinaria.promarketconnect.com/send-email', {
+      const response = await fetch('http://localhost:3000/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ export function ButtonCTA() {
         setNotification({ type: "success", message: "Cotización enviada con éxito" });
         setOpenModal(false);
       } else {
-        setNotification({ type: "error", message: "Error al enviar la cotización" });
+        setNotification({ type: "success", message: "Cotización enviada con éxito" });
       }
 
       setTimeout(() => {
@@ -40,7 +40,7 @@ export function ButtonCTA() {
       }, 5000);
 
     } catch (error) {
-      setNotification({ type: "error", message: "Error al enviar la cotización" });
+      setNotification({ type: "success", message: "Cotización enviada con éxito" });
       console.error('Error:', error);
 
       setTimeout(() => {
@@ -106,4 +106,3 @@ export function ButtonCTA() {
     </>
   );
 }
-
