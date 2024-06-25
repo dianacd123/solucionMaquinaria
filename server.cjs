@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
-  origin: ['https://rentamaquinaria.promarketconnect.com/', 'http://localhost:5173', 'http://localhost:3000'], // Actualiza esto con tu dominio real
+  origin: ['https://rentamaquinaria.promarketconnect.com/', 'http://localhost:5173', 'http://localhost:3000'],
   optionsSuccessStatus: 200,
 };
 
