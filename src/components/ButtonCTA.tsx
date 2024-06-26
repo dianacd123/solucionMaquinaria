@@ -32,7 +32,7 @@ export function ButtonCTA() {
         setNotification({ type: "success", message: "Cotización enviada con éxito" });
         setOpenModal(false);
       } else {
-        setNotification({ type: "success", message: "Cotización enviada con éxito" });
+        setNotification({ type: "error", message: "Error al enviar la cotización" });
       }
 
       setTimeout(() => {
@@ -40,7 +40,7 @@ export function ButtonCTA() {
       }, 5000);
 
     } catch (error) {
-      setNotification({ type: "success", message: "Cotización enviada con éxito" });
+      setNotification({ type: "error", message: "Error al enviar la cotización" });
       console.error('Error:', error);
 
       setTimeout(() => {
