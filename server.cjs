@@ -5,16 +5,15 @@ const cors = require('cors');
 require('dotenv').config({ path: './cred.env' });
 
 const app = express();
-
 const PORT = process.env.PORT || 3000;
 
+// Habilitar CORS
+app.use(cors({
+  origin: 'http://localhost:4173', // Cambia esto al dominio de tu frontend en producción
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type,Authorization'
+}));
 
-const corsOptions = {
-  origin: 'https://rentamaquinaria.promarketconnect.com', 
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 console.log('Email User:', process.env.EMAIL_USER);
