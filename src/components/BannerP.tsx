@@ -10,10 +10,10 @@ export default function BannerP() {
     <h1 className="text-[#0b0a09] font-bold sm:text-6xl text-5xl">
     ¡Maquinaria para tus proyectos!
     </h1>
-    <h2 className="text-[#0b0a09] text-lg py-8">
+    <h2 className="text-[#0b0a09]  text-lg py-6">
       
     <br></br>
-      Explore nuetros servicios de <strong> venta y alquiler de maquinaria </strong>
+      Explore nuetros servicios de <strong> venta y renta de maquinaria </strong>
        y descubra cómo podemos ayudarle a alcanzar sus objetivos 
     </h2>
     <div className=" ">
