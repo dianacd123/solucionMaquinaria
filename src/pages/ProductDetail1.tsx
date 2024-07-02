@@ -1,9 +1,9 @@
-import DetailM from "../components/DetailM"
+import DetailMPrueba from "../components/DetailMPrueba"
 
 export default function ProductDetail1() {
   return (
     <div>
-        <DetailM></DetailM>
+        <DetailMPrueba></DetailMPrueba>
     </div>
 
   )
