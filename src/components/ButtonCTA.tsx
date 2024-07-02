@@ -8,24 +8,15 @@ export function ButtonCTA() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
     const formData = new FormData(event.currentTarget);
-    const data = {
-      nombre: formData.get('nombre') as string,
-      email: formData.get('email') as string,
-      telefono: formData.get('telefono') as string,
-      proyecto: formData.get('proyecto') as string,
-      maquinaria: formData.get('maquinaria') as string,
-      tipo: formData.get('tipo') as string,  
-    };
 
     try {
-      const response = await fetch('https://rentamaquinaria.promarketconnect.com/send-email', {
+      const response = await fetch('https://formsubmit.co/ajax/gsanchez@promarketconnect.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(Object.fromEntries(formData)),
       });
 
       if (response.ok) {
@@ -38,7 +29,6 @@ export function ButtonCTA() {
       setTimeout(() => {
         setNotification(null);
       }, 5000);
-
     } catch (error) {
       setNotification({ type: "error", message: "Error al enviar la cotización" });
       console.error('Error:', error);
@@ -55,7 +45,7 @@ export function ButtonCTA() {
       <Modal show={openModal} size="2xl" popup onClose={() => setOpenModal(false)} initialFocus={emailInputRef}>
         <Modal.Header />
         <Modal.Body>
-          <div className="max-w-4xl mx-auto py-10 pt-0 pb-0 ">
+          <div className="max-w-4xl mx-auto py-10 pt-0 pb-0">
             <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">Solicita una Cotización</h1>
             <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
               <div className="mb-4">
@@ -106,3 +96,4 @@ export function ButtonCTA() {
     </>
   );
 }
+
