@@ -7,9 +7,16 @@ require('dotenv').config({ path: './cred.env' });
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Habilitar CORS
+// Configuración de CORS
+const allowedOrigins = ['http://localhost:4173', 'https://rentamaquinaria.promarketconnect.com'];
 app.use(cors({
-  origin: 'https://rentamaquinaria.promarketconnect.com/', // Cambia esto al dominio de tu frontend en producción
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('No permitido por CORS'));
+    }
+  },
   methods: 'GET,POST',
   allowedHeaders: 'Content-Type,Authorization'
 }));
