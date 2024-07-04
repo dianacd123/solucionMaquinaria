@@ -1,13 +1,13 @@
 import BannerP from "../components/BannerP";
 import ButtonWhatsApp from "../components/ButtonWhatsApp";
 import { Component } from "../components/Footer";
-import Gallery from "../components/Gallery";
 import Header from "../components/Header";
 import { HiringProcess } from "../components/HiringProcess";
 import QuienesS from "../components/QuienesS";
 import ServicesP from "../components/ServicesP";
 import Test from "../components/Testimonials";
 import M_card from '../components/M_card';
+import ProductList from '../components/ProductList';
 
 
 export default function Home() {
@@ -23,7 +23,11 @@ export default function Home() {
         <QuienesS></QuienesS>
         <ServicesP></ServicesP>
         <HiringProcess></HiringProcess>
-        <Gallery></Gallery>
+        <div className="container mx-auto px-4 text-center">
+          <h1 style={{ color: '#fde502' }} className="font-bold text-5xl" >MAQUINARIA DISPONIBLE</h1>
+          <br></br>
+          <ProductList />
+        </div>
         <Test></Test>
         <ButtonWhatsApp></ButtonWhatsApp>
         <Component></Component>
