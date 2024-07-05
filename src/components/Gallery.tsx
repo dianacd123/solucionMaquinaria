@@ -1,17 +1,19 @@
-import React from 'react';
-import ImageInfo from './ImageInfo';
-import img1 from '../assets/B420FNB.png';
-import img2 from '../assets/B320NB.png';
-import img3 from '../assets/B416FNB.png';
-import img4 from '../assets/B320EP.png';
+import React from "react";
+import ImageInfo from "./ImageInfo";
+import img1 from "../assets/B420FNB.png";
+import img2 from "../assets/B320NB.png";
+import img3 from "../assets/B416FNB.png";
+import img4 from "../assets/B320EP.png";
 
 const Gallery: React.FC = () => {
   return (
     <div id="Maquinaria" className="bg-[#0B0A09] p-20">
-      <div className="flex justify-center mb-8">
-        <h1 className="text-[#FDE502] font-bold text-5xl">MAQUINARIA DISPONIBLE</h1>
+      <div className="mb-8 flex justify-center">
+        <h1 className="text-5xl font-bold text-[#FDE502]">
+          MAQUINARIA DISPONIBLE
+        </h1>
       </div>
-      <div className="flex justify-around flex-wrap gap-20">
+      <div className="flex flex-wrap justify-around gap-20">
         <ImageInfo
           src={img1}
           alt="Retroexcavadora caterpillar 420F"
@@ -42,4 +44,3 @@ const Gallery: React.FC = () => {
 };
 
 export default Gallery;
-

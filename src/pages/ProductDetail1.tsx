@@ -1,10 +1,9 @@
-import DetailM from "../components/DetailM"
+import DetailM from "../components/DetailM";
 
 export default function ProductDetail1() {
   return (
     <div>
-        <DetailM></DetailM>
+      <DetailM></DetailM>
     </div>
-
-  )
+  );
 }

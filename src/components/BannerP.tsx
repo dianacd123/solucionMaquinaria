@@ -1,30 +1,26 @@
 import { ButtonCTA } from "./ButtonCTA";
-import image from "/src/assets/image.jpg"
-
+import image from "/src/assets/image.jpg";
 
 export default function BannerP() {
   return (
-    
     <div className="  sm:flex md:h-[550px]">
-  <div className="flex-1 justify-center  p-10   bg-[#FDE502] flex flex-col">
-    <h1 className="text-[#0b0a09] font-bold sm:text-6xl text-5xl">
-    ¡Maquinaria para tus proyectos!
-    </h1>
-    <h2 className="text-[#0b0a09]  text-lg py-6">
-      
-    <br></br>
-      Explore nuetros servicios de <strong> venta y renta de maquinaria </strong>
-       y descubra cómo podemos ayudarle a alcanzar sus objetivos 
-    </h2>
-    <div className=" ">
-      <ButtonCTA></ButtonCTA>
+      <div className="flex flex-1  flex-col   justify-center bg-[#FDE502] p-10">
+        <h1 className="text-5xl font-bold text-[#0b0a09] sm:text-6xl">
+          ¡Maquinaria para tus proyectos!
+        </h1>
+        <h2 className="py-6  text-lg text-[#0b0a09]">
+          <br></br>
+          Explore nuetros servicios de{" "}
+          <strong> venta y renta de maquinaria </strong>y descubra cómo podemos
+          ayudarle a alcanzar sus objetivos
+        </h2>
+        <div className=" ">
+          <ButtonCTA></ButtonCTA>
+        </div>
+      </div>
+      <div className="flex flex-1">
+        <img className="object-cover " src={image} alt="" />
+      </div>
     </div>
-  </div>
-  <div className="flex-1 flex">
-    <img className="object-cover " src={image} alt="" />
-  </div>
-</div>
-
-    
-  )
+  );
 }
