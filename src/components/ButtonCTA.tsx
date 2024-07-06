@@ -56,7 +56,7 @@ export function ButtonCTA() {
 
   return (
     <>
-      <Button className="bg-[#0f4bad]" onClick={() => setOpenModal(true)}>
+      <Button className="transition duration-500 hover:scale-110 hover:bg-blue-700 font-bold bg-[#0f4bad]" onClick={() => setOpenModal(true)}>
         COTIZA AHORA
       </Button>
       <Modal

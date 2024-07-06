@@ -60,7 +60,7 @@ const Test = () => {
     <div id="Testimonios" className="font-poppins min-h-2 bg-black">
       <div className="py-10 text-center">
         <h2 className="text-5xl font-bold text-[#fde502]">
-          Usuarios de <br /> "Tu solución en Maquinarias" satisfechos
+           CLIENTES SATISFECHOS
         </h2>
       </div>
 

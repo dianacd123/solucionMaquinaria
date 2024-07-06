@@ -5,7 +5,7 @@ export function HiringProcess() {
     <section className="body-font text-gray-600">
       <div className="container mx-auto flex flex-wrap justify-center px-32 py-24">
         <h1 className="p-6 text-center text-5xl font-bold text-[#FDE502]">
-          PROCESO DE CONTRATACIÓN
+          COMPRA Y RENTA EN 4 PASOS
         </h1>
         <div className="flex w-full flex-wrap">
           <div className="md:w-1/2 md:py-6 md:pr-10 lg:w-3/5">

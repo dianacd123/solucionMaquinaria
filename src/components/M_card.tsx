@@ -96,8 +96,8 @@ const MCard: React.FC = () => {
             </div>
             <div className="w-full px-6 pb-5">
               <Link to={card.linkdetail || "#"} className="w-full">
-                <button className="mt-2 block w-full transform rounded bg-blue-500 px-4 py-2 font-bold text-white transition duration-500 hover:scale-110 hover:bg-blue-700">
-                  Ver detalles
+                <button className="mt-2 block w-full transform rounded bg-blue-700 px-4 py-2 font-bold text-white transition duration-500 hover:scale-110 hover:bg-sky-900">
+                  VER DETALLES
                 </button>
               </Link>
             </div>
