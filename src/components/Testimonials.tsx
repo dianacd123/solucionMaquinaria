@@ -23,7 +23,7 @@ const Test = () => {
     {
       nombre: "Pedro",
       testimonio:
-        "Alquilar maquinaria con Tu Solución en Maquinaria fue una experiencia sin complicaciones de principio a fin. Su equipo fue amable, atento y siempre disponible para responder a mis preguntas y brindar asesoramiento experto. ¡Gracias por hacer que mi proyecto sea un éxito!",
+        "Alquilar maquinaria con Tu Solución en Maquinaria fue una experiencia sin complicaciones de principio a fin. Su equipo fue amable, atento y siempre disponible para responder a mis preguntas y brindar asesoramiento experto. ",
       imagen: imagenPedro,
     },
   ];
