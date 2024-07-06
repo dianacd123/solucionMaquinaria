@@ -11,7 +11,7 @@ import { BsFacebook, BsInstagram, BsTwitter, BsTiktok } from "react-icons/bs";
 
 export function Component() {
   return (
-    <Footer container className="rounded-none bg-black py-8">
+    <Footer container className="rounded-none bg-black p-10">
       <div className="w-full">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div>
