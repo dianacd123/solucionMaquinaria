@@ -22,7 +22,7 @@ export default function Home() {
       <QuienesS></QuienesS>
       <ServicesP></ServicesP>
       <HiringProcess></HiringProcess>
-      <div className="container mx-auto p-10 text-center">
+      <div className="container mx-auto sm:px-20 p-10 text-center">
         <h1 style={{ color: "#fde502" }} className="text-5xl font-bold">
           MAQUINARIA DISPONIBLE
         </h1>

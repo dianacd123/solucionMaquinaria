@@ -3,7 +3,7 @@ import img from "../assets/image.jpg";
 export function HiringProcess() {
   return (
     <section className="body-font text-gray-600">
-      <div className="container mx-auto flex flex-wrap justify-center p-10">
+      <div className="container mx-auto flex flex-wrap justify-center sm:px-20 p-10">
         <h1 className="p-6 text-center text-5xl font-bold text-[#FDE502]">
           COMPRA Y RENTA EN 4 PASOS
         </h1>

@@ -13,7 +13,7 @@ const estiloH1: React.CSSProperties = {
 
 const ServicesP: React.FC = () => {
   return (
-    <div className="flex h-full flex-col items-center justify-center bg-[#0B0A09] p-10 sm:h-auto sm:flex-row">
+    <div className="flex h-full flex-col items-center justify-center bg-[#0B0A09] p-10  sm:px-20 sm:h-auto sm:flex-row">
       <section className="portafolio">
         <div className="container mx-auto">
           <h2
