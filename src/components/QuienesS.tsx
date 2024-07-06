@@ -4,7 +4,7 @@ const QuienesS = () => {
   return (
     <div
       id="QuienesSomos"
-      className="flex h-full flex-col items-center justify-center bg-[#0B0A09] p-20 sm:h-auto sm:flex-row"
+      className="flex h-full flex-col items-center justify-center bg-[#0B0A09] p-10 sm:h-auto sm:flex-row"
     >
       <img
         src={imagen1}
