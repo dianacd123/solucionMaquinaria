@@ -16,7 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <img src={product.imageUrl} alt={product.name} style={styles.image} />
       <h2 style={styles.name}>{product.name}</h2>
 
-      <button style={styles.linkButton}>Ver más</button>
+      <button className="bg-blue-700 px-4 py-2 font-bold text-white transition duration-500 hover:scale-110 hover:bg-sky-900" style={styles.linkButton}>VER MÁS</button>
     </div>
   );
 };
@@ -47,7 +47,7 @@ const styles: { [key: string]: CSSProperties } = {
     lineHeight: "1.2", // Reducir el espacio entre líneas
   },
   linkButton: {
-    backgroundColor: "#0F4BAD",
+    
     color: "white",
     border: "none",
     padding: "10px 20px",
