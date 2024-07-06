@@ -3,7 +3,7 @@ import img from "../assets/image.jpg";
 export function HiringProcess() {
   return (
     <section className="body-font text-gray-600">
-      <div className="container mx-auto flex flex-wrap justify-center px-32 py-24">
+      <div className="container mx-auto flex flex-wrap justify-center p-10">
         <h1 className="p-6 text-center text-5xl font-bold text-[#FDE502]">
           COMPRA Y RENTA EN 4 PASOS
         </h1>
@@ -84,7 +84,7 @@ export function HiringProcess() {
             </div>
           </div>
           <img
-            className="mt-12 rounded-lg object-cover object-center md:mt-0 md:w-1/2 lg:w-2/5"
+            className=" rounded-lg object-cover object-center md:mt-0 md:w-1/2 lg:w-2/5"
             src={img}
             alt="step"
           />
