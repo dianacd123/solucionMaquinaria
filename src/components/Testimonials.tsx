@@ -11,7 +11,7 @@ const Test = () => {
     {
       nombre: "Natalia",
       testimonio:
-        "Excelente servicio y maquinaria de calidad: Estoy muy impresionado con la atención al cliente y la calidad de la maquinaria proporcionada por Tu Solución en Maquinaria. Su equipo experto me ayudó a seleccionar la maquinaria adecuada para mi proyecto, y la entrega fue puntual y sin problemas.",
+        "Excelente servicio y maquinaria de calidad: Estoy muy impresionado con la atención al cliente y la calidad de la maquinaria proporcionada por Tu Solución en Maquinaria. Su equipo experto me ayudó a seleccionar la maquinaria adecuada para mi proyecto.",
       imagen: imagenNatalia,
     },
     {
