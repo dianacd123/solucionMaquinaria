@@ -61,7 +61,7 @@ const MCard: React.FC = () => {
   };
 
   return (
-    <div className="py-5">
+    <div className=" ">
       <Carousel
         responsive={responsive}
         showDots={true}
@@ -81,7 +81,7 @@ const MCard: React.FC = () => {
             className="m-2 flex h-full transform flex-col items-center justify-between overflow-hidden rounded border-2 border-[#FDE502] bg-[#0B0A09] shadow-lg transition duration-500 hover:scale-105 hover:shadow-2xl md:m-4"
             style={{ minWidth: "280px", maxWidth: "300px", width: "100%" }}
           >
-            <div className="px-6 py-4">
+            <div className="px-6 py-6">
               <div className="mb-2 text-xl font-bold text-[#FFFFFF]">
                 {card.title}
               </div>
