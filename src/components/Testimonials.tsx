@@ -70,12 +70,12 @@ const Test = () => {
         animate="show"
         viewport={{ once: false, amount: 0.7 }}
       >
-        <section className=" bg-black text-white">
+        <section className=" bg-[#0B0A09] text-white">
           <div className="w-full pb-6">
             <Slider {...settings}>
               {testimonios.map((testimonio, index) => (
                 <div key={index} className="px-4">
-                  <div className="flex h-full flex-col justify-between rounded-lg bg-black p-6 text-center">
+                  <div className="flex h-full flex-col justify-between rounded-lg bg-[#0B0A09] p-4 text-center">
                     <div className="flex flex-1 flex-col justify-center rounded-sm bg-[#fde502] py-7">
                       <img
                         src={testimonio.imagen}
