@@ -1,3 +1,6 @@
+import logo from "../assets/LogoWhite.png";
+import { Link } from "react-router-dom";
+
 import {
   Footer,
   FooterCopyright,
@@ -14,11 +17,12 @@ export function Component() {
     <Footer container className="rounded-none bg-black p-10">
       <div className="w-full">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          <div>
-            <h1 className="mb-4 text-2xl font-bold text-white">
-              TU SOLUCIÓN EN MAQUINARIA
-            </h1>
-          </div>
+        <div className="flex justify-center ">
+  <Link to="/">
+    <img className="m-0 h-[65px] sm:h-20 object-cover" src={logo} alt="Logo" />
+  </Link>
+</div>
+
           <div>
             <FooterTitle
               className="text-x1 font-bold text-white"
