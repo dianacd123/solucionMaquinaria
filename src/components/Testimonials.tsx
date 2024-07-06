@@ -23,7 +23,7 @@ const Test = () => {
     {
       nombre: "Pedro",
       testimonio:
-        "Alquilar maquinaria con Tu Solución en Maquinaria fue una experiencia sin complicaciones de principio a fin. Su equipo fue amable, atento y siempre disponible para responder a mis preguntas y brindar asesoramiento experto. ",
+        "Alquilar maquinaria con Tu Solución en Maquinaria fue una experiencia sin complicaciones de principio a fin. Su equipo fue amable, atento y siempre disponible para responder a mis preguntas y brindar asesoramiento experto. Los mejores en el mercado ",
       imagen: imagenPedro,
     },
   ];
@@ -60,7 +60,7 @@ const Test = () => {
     <div id="Testimonios" className="font-poppins min-h-2 bg-[#0B0A09]">
       <div className="py-10 text-center">
         <h2 className="text-5xl font-bold text-[#fde502]">
-           CLIENTES SATISFECHOS
+          CLIENTES SATISFECHOS
         </h2>
       </div>
 
@@ -70,13 +70,13 @@ const Test = () => {
         animate="show"
         viewport={{ once: false, amount: 0.7 }}
       >
-        <section className=" bg-[#0B0A09] text-white">
+        <section className="bg-[#0B0A09] text-white">
           <div className="w-full pb-6">
             <Slider {...settings}>
               {testimonios.map((testimonio, index) => (
                 <div key={index} className="px-4">
                   <div className="flex h-full flex-col justify-between rounded-lg bg-[#0B0A09] p-4 text-center">
-                    <div className="flex flex-1 flex-col justify-center rounded-sm bg-[#fde502] py-7">
+                    <div className="flex flex-1 flex-col justify-center items-center rounded-sm bg-[#fde502] py-7">
                       <img
                         src={testimonio.imagen}
                         alt={testimonio.nombre}
@@ -86,7 +86,7 @@ const Test = () => {
                         {testimonio.nombre}
                       </h3>
                     </div>
-                    <div className="rounded-b-lg bg-white p-6">
+                    <div className="rounded-b-lg bg-white p-6 flex-1 flex items-center justify-center">
                       <p className="text-md md:text-md font-medium text-black">
                         {testimonio.testimonio}
                       </p>
