@@ -17,13 +17,13 @@ const ServicesP: React.FC = () => {
       <section className="portafolio">
         <div className="container mx-auto">
           <h2
-            className="text-center text-4xl font-bold text-black md:text-5xl"
+            className="text-center text-4xl font-bold text-black md:text-5xl "
             style={estiloH1}
           >
             NUESTROS SERVICIOS
           </h2>
           <br />
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 font-bold">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
             <Card
               title="ALQUILER DE MAQUINARIA"
               imageSrc={imagen2}

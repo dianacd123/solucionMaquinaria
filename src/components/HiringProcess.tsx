@@ -18,7 +18,7 @@ export function HiringProcess() {
                 <h1>1</h1>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="title-font text-md mb-1 font-medium tracking-wider text-[#FDE502]">
+                <h2 className="title-font text-lg mb-1 font-medium tracking-wider text-[#FDE502]">
                   CONSULTA Y ASESORAMIENTO INICIAL
                 </h2>
                 <p className="leading-relaxed text-white">
@@ -35,7 +35,7 @@ export function HiringProcess() {
                 <h1>2</h1>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="title-font text-md mb-1 font-medium tracking-wider text-[#FDE502]">
+                <h2 className="title-font text-lg mb-1 font-medium tracking-wider text-[#FDE502]">
                   COTIZACIÓN Y RESERVA
                 </h2>
                 <p className="leading-relaxed text-white">
@@ -53,7 +53,7 @@ export function HiringProcess() {
                 <h1>3</h1>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="title-font text-md mb-1 font-medium tracking-wider text-[#FDE502]">
+                <h2 className="title-font text-lg mb-1 font-medium tracking-wider text-[#FDE502]">
                   ENTREGA Y SOPORTE DURANTE EL ALQUILER
                 </h2>
                 <p className="leading-relaxed text-white">
@@ -71,8 +71,8 @@ export function HiringProcess() {
                 <h1>4</h1>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="title-font text-md mb-1 font-medium tracking-wider text-[#FDE502]">
-                  RECOGIDA Y FACTURACIÓN
+                <h2 className="title-font text-lg mb-1 font-medium tracking-wider text-[#FDE502]">
+                  ENTREGA Y FACTURACIÓN
                 </h2>
                 <p className="leading-relaxed text-white">
                   {" "}
