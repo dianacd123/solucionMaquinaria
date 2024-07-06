@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-// Importa las imágenes
+
 import B420FNB from "../assets/B420FNB.png";
 import B320NB from "../assets/B320NB.png";
 import B416FNB from "../assets/B416FNB.png";
