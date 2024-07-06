@@ -12,7 +12,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <div style={styles.card}>
+    <div className="" style={styles.card}>
       <img src={product.imageUrl} alt={product.name} style={styles.image} />
       <h2 style={styles.name}>{product.name}</h2>
 
