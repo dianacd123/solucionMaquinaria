@@ -1,6 +1,6 @@
+import React, { useEffect } from "react";
 import BannerP from "../components/BannerP";
 import ButtonWhatsApp from "../components/ButtonWhatsApp";
-import { Component } from "../components/Footer";
 import Header from "../components/Header";
 import { HiringProcess } from "../components/HiringProcess";
 import QuienesS from "../components/QuienesS";
@@ -8,8 +8,13 @@ import ServicesP from "../components/ServicesP";
 import Test from "../components/Testimonials";
 import M_card from "../components/M_card";
 import ProductList from "../components/ProductList";
+import { Component } from "../components/Footer";
 
-export default function Home() {
+const Home: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div>
       <Header></Header>
