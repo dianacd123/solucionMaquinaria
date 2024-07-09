@@ -1,9 +1,16 @@
-import DetailM3 from "../components/DetailM3";
+import React, { useEffect } from "react";
+import DetailM from "../components/DetailM3";
 
-export default function ProductDetail1() {
+const ProductDetail3: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
-      <DetailM3></DetailM3>
+      <DetailM />
     </div>
   );
-}
+};
+
+export default ProductDetail3;
