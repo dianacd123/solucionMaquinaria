@@ -14,19 +14,19 @@ const Home: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
-    <div>
-      <Header></Header>
-      <BannerP></BannerP>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <BannerP />
       <section id="cards-section" className="py-8">
         <div className="container mx-auto px-4 text-center">
           <M_card></M_card>
         </div>
       </section>
-      <QuienesS></QuienesS>
-      <ServicesP></ServicesP>
-      <HiringProcess></HiringProcess>
+      <QuienesS />
+      <ServicesP />
+      <HiringProcess />
       <section id="available-machinery-section" className="py-8">
         <div className="container mx-auto sm:px-20 px-4 p-10 text-center">
           <h1 className="text-5xl font-bold text-center" style={{ color: "#fde502" }}>
@@ -36,9 +36,12 @@ const Home: React.FC = () => {
           <ProductList />
         </div>
       </section>
-      <Test></Test>
-      <ButtonWhatsApp></ButtonWhatsApp>
-      <Component></Component>
+      <Test />
+      <ButtonWhatsApp />
+      <Component/>
     </div>
   );
-}
+};
+
+export default Home;
+
