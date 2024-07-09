@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import img1 from "../assets/B420FNB.png";
 import img2 from "../assets/B320NB.png";
@@ -41,12 +41,22 @@ const products: Product[] = [
 ];
 
 const ProductList: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (link: string) => {
+    navigate(link);
+  };
+
   return (
     <div style={styles.container}>
       {products.map((product) => (
-        <Link key={product.id} to={product.link} style={styles.link}>
+        <div
+          key={product.id}
+          onClick={() => handleClick(product.link)}
+          style={styles.link}
+        >
           <ProductCard product={product} />
-        </Link>
+        </div>
       ))}
     </div>
   );
@@ -62,7 +72,9 @@ const styles: { [key: string]: CSSProperties } = {
   link: {
     textDecoration: "none",
     color: "inherit",
+    cursor: "pointer",
   },
 };
 
 export default ProductList;
+
