@@ -22,13 +22,15 @@ export default function Home() {
       <QuienesS></QuienesS>
       <ServicesP></ServicesP>
       <HiringProcess></HiringProcess>
-      <div className="container mx-auto sm:px-20 p-10 text-center">
-        <h1 style={{ color: "#fde502" }} className="text-5xl font-bold">
-          MAQUINARIA DISPONIBLE
-        </h1>
-        <br></br>
-        <ProductList />
-      </div>
+      <section id="available-machinery-section" className="py-8">
+        <div className="container mx-auto sm:px-20 px-4 p-10 text-center">
+          <h1 className="text-5xl font-bold text-center" style={{ color: "#fde502" }}>
+            MAQUINARIA DISPONIBLE
+          </h1>
+          <br />
+          <ProductList />
+        </div>
+      </section>
       <Test></Test>
       <ButtonWhatsApp></ButtonWhatsApp>
       <Component></Component>
