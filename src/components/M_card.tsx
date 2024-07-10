@@ -16,28 +16,28 @@ const MCard: React.FC = () => {
       image: B420FNB,
       description:
         "Retroexcavadora con un peso de 8.50 toneladas, cuchara de 2.34 m de ancho y 1.00 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.50 m.",
-      linkdetail: "./ProductDetail1",
+      linkdetail: "/retroexcavadora-caterpillar-420f-2024",
     },
     {
       title: "Excavadora caterpillar 320",
       image: B320NB,
       description:
         "Excavadora caterpillar con un peso de 20-23 toneladas, cuchara de 1.00 m de ancho y 1.00-1.20 m³ de capacidad. Tracción en orugas y longitud de transporte de 9.70 m.",
-      linkdetail: "./ProductDetail2",
+      linkdetail: "/excavadora-caterpillar-320-2024",
     },
     {
       title: "Retroexcavadora caterpillar 416F",
       image: B416FNB,
       description:
         "Retroexcavadora con un peso de 7.21 toneladas, cuchara de 2.26 m de ancho y 0.76 m³ de capacidad. Tracción en todas las ruedas y longitud de transporte de 7.08 m.",
-      linkdetail: "./ProductDetail3",
+      linkdetail: "/retroexcavadora-caterpillar-416f-2024",
     },
     {
       title: "Excavadora caterpillar 320E",
       image: B320EP,
       description:
         "Excavadora con un peso de 22.5 toneladas, cuchara de 1.00 m de ancho y 1.19 m³ de capacidad. Tracción en orugas y longitud de transporte de 9.54 m.",
-      linkdetail: "./ProductDetail4",
+      linkdetail: "/excavadora-caterpillar-320e-2024",
     },
   ];
 
