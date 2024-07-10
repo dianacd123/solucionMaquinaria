@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import { motion } from "framer-motion";
 
 import B420FNB from "../assets/B420FNB.png";
 import B320NB from "../assets/B320NB.png";
@@ -76,9 +76,12 @@ const MCard: React.FC = () => {
         itemClass="carousel-item"
       >
         {cards.map((card, index) => (
-          <div
+          <motion.div
             key={index}
-            className="m-2 flex h-full transform flex-col items-center justify-between overflow-hidden rounded border-2 border-[#FDE502] bg-[#0B0A09] shadow-lg transition duration-500 hover:scale-105 hover:shadow-2xl md:m-4"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.05 }}
+            className="m-2 flex h-full transform flex-col items-center justify-between overflow-hidden rounded border-2 border-[#FDE502] bg-[#0B0A09] shadow-lg transition duration-500 hover:shadow-2xl md:m-4"
             style={{ minWidth: "280px", maxWidth: "300px", width: "100%" }}
           >
             <div className="px-6 py-6">
@@ -86,7 +89,10 @@ const MCard: React.FC = () => {
                 {card.title}
               </div>
             </div>
-            <img
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
               className="h-48 w-full object-cover"
               src={card.image}
               alt={card.title}
@@ -96,12 +102,16 @@ const MCard: React.FC = () => {
             </div>
             <div className="w-full px-6 pb-5">
               <Link to={card.linkdetail || "#"} className="w-full">
-                <button className="mt-2 block w-full transform rounded bg-blue-700 px-4 py-2 font-bold text-white transition duration-500 hover:scale-110 hover:bg-sky-900">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="mt-2 block w-full transform rounded bg-blue-700 px-4 py-2 font-bold text-white transition duration-500 hover:scale-110 hover:bg-sky-900"
+                >
                   VER DETALLES
-                </button>
+                </motion.button>
               </Link>
             </div>
-          </div>
+          </motion.div>
         ))}
       </Carousel>
     </div>

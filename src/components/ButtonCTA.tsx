@@ -1,5 +1,6 @@
 import { Button, Modal } from "flowbite-react";
 import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 export function ButtonCTA() {
   const [openModal, setOpenModal] = useState(false);
@@ -22,7 +23,7 @@ export function ButtonCTA() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(Object.fromEntries(formData)),
-        },
+        }
       );
 
       if (response.ok) {
@@ -56,9 +57,17 @@ export function ButtonCTA() {
 
   return (
     <>
-      <Button className="transition duration-500 hover:scale-110 hover:bg-blue-700 font-bold bg-[#0f4bad]" onClick={() => setOpenModal(true)}>
-        COTIZA AHORA
-      </Button>
+      <motion.div
+        whileHover={{ x: 10 }} // Mueve el botón a la derecha 10px al hacer hover
+        whileTap={{ scale: 0.9 }}
+      >
+        <Button
+          className="transition duration-500 font-bold bg-[#0f4bad]"
+          onClick={() => setOpenModal(true)}
+        >
+          COTIZA AHORA
+        </Button>
+      </motion.div>
       <Modal
         show={openModal}
         size="2xl"
@@ -69,14 +78,24 @@ export function ButtonCTA() {
         <Modal.Header />
         <Modal.Body>
           <div className="mx-auto max-w-4xl py-10 pb-0 pt-0">
-            <h1 className="mb-8 text-center text-4xl font-bold text-gray-800">
+            <motion.h1
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-8 text-center text-4xl font-bold text-gray-800"
+            >
               Solicita una Cotización
-            </h1>
+            </motion.h1>
             <form
               className="mb-4 rounded bg-white px-8 pb-8 pt-6 shadow-md"
               onSubmit={handleSubmit}
             >
-              <div className="mb-4">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-4"
+              >
                 <label
                   className="mb-2 block text-sm font-bold text-gray-700"
                   htmlFor="nombre"
@@ -90,8 +109,13 @@ export function ButtonCTA() {
                   type="text"
                   placeholder="Nombre Completo"
                 />
-              </div>
-              <div className="mb-4">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-4"
+              >
                 <label
                   className="mb-2 block text-sm font-bold text-gray-700"
                   htmlFor="email"
@@ -105,8 +129,13 @@ export function ButtonCTA() {
                   type="email"
                   placeholder="Correo Electrónico"
                 />
-              </div>
-              <div className="mb-4">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-4"
+              >
                 <label
                   className="mb-2 block text-sm font-bold text-gray-700"
                   htmlFor="telefono"
@@ -120,8 +149,13 @@ export function ButtonCTA() {
                   type="tel"
                   placeholder="Teléfono"
                 />
-              </div>
-              <div className="mb-4">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-4"
+              >
                 <label
                   className="mb-2 block text-sm font-bold text-gray-700"
                   htmlFor="proyecto"
@@ -135,8 +169,13 @@ export function ButtonCTA() {
                   rows={4}
                   placeholder="Describe tu proyecto y necesidades"
                 ></textarea>
-              </div>
-              <div className="mb-4">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-4"
+              >
                 <label
                   className="mb-2 block text-sm font-bold text-gray-700"
                   htmlFor="maquinaria"
@@ -154,8 +193,13 @@ export function ButtonCTA() {
                   <option>Tractor</option>
                   <option>Otro</option>
                 </select>
-              </div>
-              <div className="mb-4">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-4"
+              >
                 <label
                   className="mb-2 block text-sm font-bold text-gray-700"
                   htmlFor="tipo"
@@ -170,25 +214,33 @@ export function ButtonCTA() {
                   <option>Renta</option>
                   <option>Compra</option>
                 </select>
-              </div>
-              <div className="flex items-center justify-between">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex items-center justify-between"
+              >
                 <button
                   className="focus:shadow-outline rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
                   type="submit"
                 >
                   Enviar Cotización
                 </button>
-              </div>
+              </motion.div>
             </form>
           </div>
         </Modal.Body>
       </Modal>
       {notification && (
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className={`fixed left-0 right-0 top-0 z-50 bg-${notification.type === "success" ? "green" : "red"}-500 py-4 text-center text-white`}
         >
           {notification.message}
-        </div>
+        </motion.div>
       )}
     </>
   );

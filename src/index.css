@@ -30,3 +30,16 @@ html, body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+
+.animate {
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-load {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
