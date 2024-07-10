@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import { Component } from "../components/Footer";
@@ -13,14 +13,89 @@ import image3 from "../assets/image3.jpeg";
 import image4 from "../assets/image4.jpeg";
 import image5 from "../assets/image5.jpeg";
 
-export default function DetailM() {
+// Props para el modal de imagen expandida
+interface ImageModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  selectedImage: string;
+  images: string[];
+  setSelectedImage: React.Dispatch<React.SetStateAction<string>>;
+}
+
+// Componente del modal de imagen expandida
+const ImageModal: React.FC<ImageModalProps> = ({
+  isOpen,
+  onClose,
+  selectedImage,
+  images,
+  setSelectedImage,
+}) => {
+  if (!isOpen) return null;
+
+  const handleNextImage = () => {
+    const currentIndex = images.indexOf(selectedImage);
+    const nextIndex = (currentIndex + 1) % images.length;
+    setSelectedImage(images[nextIndex]);
+  };
+
+  const handlePrevImage = () => {
+    const currentIndex = images.indexOf(selectedImage);
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    setSelectedImage(images[prevIndex]);
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+      <div className="relative max-w-full max-h-full">
+        <button
+          className="absolute top-4 right-4 text-white text-4xl z-50 focus:outline-none"
+          onClick={onClose}
+          style={{ color: "#ff0000" }} 
+        >
+          &times;
+        </button>
+        <img
+          src={selectedImage}
+          alt="Selected"
+          className="max-w-full max-h-full"
+        />
+        <button
+          className="absolute top-1/2 transform -translate-y-1/2 left-4 text-white text-4xl z-50 focus:outline-none"
+          onClick={handlePrevImage}
+          style={{ color: "#ff0000" }}
+        >
+          &#8249;
+        </button>
+        <button
+          className="absolute top-1/2 transform -translate-y-1/2 right-4 text-white text-4xl z-50 focus:outline-none"
+          onClick={handleNextImage}
+          style={{ color: "#ff0000" }}
+        >
+          &#8250;
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const DetailM: React.FC = () => {
   const images = [image1, image2, image3, image4, image5];
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [selectedImage, setSelectedImage] = useState<string>(images[0]);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const openModal = (image: string) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <>
       <Header />
-      <body className="bg-white">
+      <div className="bg-white">
         <section className="body-font overflow-hidden text-gray-600">
           <div className="container mx-auto px-5 py-10">
             <Breadcrumb aria-label="Default breadcrumb example">
@@ -29,7 +104,7 @@ export default function DetailM() {
               </BreadcrumbItem>
               <BreadcrumbItem>Retroexcavadora caterpillar 420F</BreadcrumbItem>
             </Breadcrumb>
-            <div className="mx-auto flex flex-wrap lg:w-4/5 ">
+            <div className="mx-auto flex flex-wrap lg:w-4/5">
               <div className="mb-6 w-full pt-5 lg:mb-0 lg:w-1/2 lg:py-6 lg:pr-10">
                 <h2 className="title-font text-sm tracking-widest text-gray-500">
                   TU SOLUCION EN MAQUINARIA
@@ -88,11 +163,12 @@ export default function DetailM() {
               </div>
 
               <div className="flex w-full flex-col items-center pt-10 lg:w-1/2">
-                <div className="mb-4">
+                <div className="mb-4 overflow-hidden">
                   <img
                     src={selectedImage}
                     alt="Selected"
-                    className="w-full max-w-lg rounded-lg shadow-lg"
+                    className="w-full max-w-lg rounded-lg shadow-lg transition-transform duration-300 cursor-pointer"
+                    onClick={() => openModal(selectedImage)}
                   />
                 </div>
                 <div className="flex space-x-4">
@@ -102,7 +178,7 @@ export default function DetailM() {
                       src={image}
                       alt={`Thumbnail ${index + 1}`}
                       className={`h-20 w-20 cursor-pointer rounded-lg object-cover ${selectedImage === image ? "border-4 border-blue-500" : ""}`}
-                      onClick={() => setSelectedImage(image)}
+                      onClick={() => openModal(image)}
                     />
                   ))}
                 </div>
@@ -110,9 +186,18 @@ export default function DetailM() {
             </div>
           </div>
         </section>
-      </body>
+      </div>
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        selectedImage={selectedImage}
+        images={images}
+        setSelectedImage={setSelectedImage}
+      />
       <ButtonWhatsApp />
       <Component />
     </>
   );
-}
+};
+
+export default DetailM;
