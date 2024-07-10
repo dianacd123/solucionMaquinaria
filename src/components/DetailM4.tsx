@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Breadcrumb, BreadcrumbItem } from "flowbite-react";
+import { HiHome } from "react-icons/hi";
 import image from "/src/assets/B320EP.png";
 import Header from "./Header";
 import { Component } from "./Footer";
@@ -5,12 +9,21 @@ import ButtonWhatsApp from "./ButtonWhatsApp";
 import { ButtonCTA } from "./ButtonCTA";
 
 export default function DetailM4() {
+  const images = [image ];
+  const [] = useState(images[0]);
+  
   return (
     <html>
       <Header></Header>
       <body className="bg-white">
         <section className="body-font overflow-hidden text-gray-600">
           <div className="container mx-auto px-5 py-10">
+          <Breadcrumb aria-label="Default breadcrumb example">
+              <BreadcrumbItem href="./Home" icon={HiHome}>
+                <Link to="/">Volver</Link>
+              </BreadcrumbItem>
+              <BreadcrumbItem>Excavadora Caterpillar 320E</BreadcrumbItem>
+            </Breadcrumb>
             <div className="mx-auto flex flex-wrap lg:w-4/5">
               <div className="mb-6 w-full lg:mb-0 lg:w-1/2 lg:py-6 lg:pr-10">
                 <h2 className="title-font text-sm tracking-widest text-gray-500">
@@ -82,3 +95,4 @@ export default function DetailM4() {
     </html>
   );
 }
+
