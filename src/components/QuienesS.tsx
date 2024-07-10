@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import imagen1 from "../assets/Imagen1.jpg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
