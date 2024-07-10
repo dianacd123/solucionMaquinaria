@@ -18,25 +18,25 @@ const products: Product[] = [
     id: 1,
     name: "Retroexcavadora caterpillar 420F",
     imageUrl: img1,
-    link: "/ProductDetail1",
+    link: "/retroexcavadora-caterpillar-420f-2024",
   },
   {
     id: 2,
     name: "Excavadora caterpillar 320",
     imageUrl: img2,
-    link: "/ProductDetail2",
+    link: "/excavadora-caterpillar-320-2024",
   },
   {
     id: 3,
     name: "Retroexcavadora caterpillar 416F",
     imageUrl: img3,
-    link: "/ProductDetail3",
+    link: "/retroexcavadora-caterpillar-416f-2024",
   },
   {
     id: 4,
     name: "Excavadora caterpillar 320E",
     imageUrl: img4,
-    link: "/ProductDetail4",
+    link: "/excavadora-caterpillar-320e-2024",
   },
 ];
 
