@@ -58,7 +58,6 @@ export default function BannerP() {
           <ButtonCTA />
         </motion.div>
       </motion.div>
-      {/* Columna de imagen */}
       <motion.div
         initial={{ opacity: 0, y: isLargeScreen ? 50 : 0 }}
         animate={{ opacity: 1, y: 0 }}
