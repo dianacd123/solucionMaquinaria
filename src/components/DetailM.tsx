@@ -44,7 +44,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4">
-      <div className="relative max-w-full max-h-full bg-white rounded-lg p-7">
+      <div className="relative max-w-9x1 max-h-3xl bg-white rounded-lg p-7">
         <button
           className="absolute top-1 right-1 text-black text-4xl z-50 focus:outline-none"
           onClick={onClose}
@@ -57,7 +57,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
             src={selectedImage}
             alt="Selected"
             className="max-w-full max-h-full object-contain mb-4"
-            style={{ maxHeight: '70vh', maxWidth: '70vw' }}
+            style={{ maxHeight: '80vh', maxWidth: '90vw' }}
           />
           <div className="flex justify-between w-full">
             <button
@@ -189,4 +189,6 @@ const DetailM: React.FC = () => {
 };
 
 export default DetailM;
+
+
 
