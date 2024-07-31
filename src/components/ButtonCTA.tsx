@@ -5,14 +5,50 @@ import { motion } from "framer-motion";
 export function ButtonCTA() {
   const [openModal, setOpenModal] = useState(false);
   const emailInputRef = useRef<HTMLInputElement>(null);
+  const nombreInputRef = useRef<HTMLInputElement>(null);
+  const telefonoInputRef = useRef<HTMLInputElement>(null);
+  const proyectoInputRef = useRef<HTMLTextAreaElement>(null);
+  const maquinariaInputRef = useRef<HTMLSelectElement>(null);
+  const tipoInputRef = useRef<HTMLSelectElement>(null);
+
   const [notification, setNotification] = useState<{
     type: "success" | "error";
     message: string;
   } | null>(null);
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
+
+    const newErrors: { [key: string]: string } = {};
+    if (!nombreInputRef.current?.value) {
+      newErrors.nombre = "El nombre es obligatorio";
+    }
+    if (!emailInputRef.current?.value) {
+      newErrors.email = "El correo electrónico es obligatorio";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInputRef.current.value)) {
+      newErrors.email = "El correo electrónico no es válido";
+    }
+    if (!telefonoInputRef.current?.value) {
+      newErrors.telefono = "El teléfono es obligatorio";
+    } else if (!/^\d+$/.test(telefonoInputRef.current.value)) {
+      newErrors.telefono = "El teléfono solo debe contener números";
+    }
+    if (!proyectoInputRef.current?.value) {
+      newErrors.proyecto = "Los detalles del proyecto son obligatorios";
+    }
+    if (!maquinariaInputRef.current?.value) {
+      newErrors.maquinaria = "El tipo de maquinaria es obligatorio";
+    }
+    if (!tipoInputRef.current?.value) {
+      newErrors.tipo = "El tipo de solicitud es obligatorio";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
 
     try {
       const response = await fetch(
@@ -103,12 +139,14 @@ export function ButtonCTA() {
                   Nombre Completo
                 </label>
                 <input
+                  ref={nombreInputRef}
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                   id="nombre"
                   name="nombre"
                   type="text"
                   placeholder="Nombre Completo"
                 />
+                {errors.nombre && <p className="text-red-500 text-xs">{errors.nombre}</p>}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -123,12 +161,14 @@ export function ButtonCTA() {
                   Correo Electrónico
                 </label>
                 <input
+                  ref={emailInputRef}
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                   id="email"
                   name="email"
                   type="email"
                   placeholder="Correo Electrónico"
                 />
+                {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -143,12 +183,14 @@ export function ButtonCTA() {
                   Teléfono
                 </label>
                 <input
+                  ref={telefonoInputRef}
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                   id="telefono"
                   name="telefono"
                   type="tel"
                   placeholder="Teléfono"
                 />
+                {errors.telefono && <p className="text-red-500 text-xs">{errors.telefono}</p>}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -163,12 +205,14 @@ export function ButtonCTA() {
                   Detalles del Proyecto
                 </label>
                 <textarea
+                  ref={proyectoInputRef}
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                   id="proyecto"
                   name="proyecto"
                   rows={4}
                   placeholder="Describe tu proyecto y necesidades"
                 ></textarea>
+                {errors.proyecto && <p className="text-red-500 text-xs">{errors.proyecto}</p>}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -183,16 +227,19 @@ export function ButtonCTA() {
                   Tipo de Maquinaria Necesaria
                 </label>
                 <select
+                  ref={maquinariaInputRef}
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                   id="maquinaria"
                   name="maquinaria"
                 >
+                  <option value="">Seleccione una opción</option>
                   <option>Excavadora</option>
                   <option>Grúa</option>
                   <option>Montacargas</option>
                   <option>Tractor</option>
                   <option>Otro</option>
                 </select>
+                {errors.maquinaria && <p className="text-red-500 text-xs">{errors.maquinaria}</p>}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -207,13 +254,16 @@ export function ButtonCTA() {
                   Tipo de Solicitud
                 </label>
                 <select
+                  ref={tipoInputRef}
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                   id="tipo"
                   name="tipo"
                 >
+                  <option value="">Seleccione una opción</option>
                   <option>Renta</option>
                   <option>Compra</option>
                 </select>
+                {errors.tipo && <p className="text-red-500 text-xs">{errors.tipo}</p>}
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -237,7 +287,9 @@ export function ButtonCTA() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className={`fixed left-0 right-0 top-0 z-50 bg-${notification.type === "success" ? "green" : "red"}-500 py-4 text-center text-white`}
+          className={`fixed left-0 right-0 top-0 z-50 bg-${
+            notification.type === "success" ? "green" : "red"
+          }-500 py-4 text-center text-white`}
         >
           {notification.message}
         </motion.div>
